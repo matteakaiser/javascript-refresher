@@ -1,9 +1,19 @@
-let consonants= ['b'+'op', 'c'+'op', 'd'+'op', 'f'+'op', 'g'+'op', 'h'+'op', 'j'+'op', 'l'+'op', 'm'+'op', 'n'+'op', 'p'+'op', 'q'+'op', 'r'+'op', 's'+'op', 't'+'op', 'v'+'op', 'w'+'op', 'x'+'op', 'y'+'op', 'z'+'op'];
+// array of vowles
 let vowels= ['a','e' , 'i' , 'o' , 'u'];
-let message='Hello world!'
-if (message==consonants) {
-    console.log(message);
+// splitting message into array of characters
+let message='Hello Mr Gorton'.split('')
+// declare a varible to hold the output message due to the new line console log
+let output = ''
+// loop through each character in the message array
+for (let index = 0; index < message.length; ++index) {
+  const element = message[index];
+  // check if charcater is vowel or space
+  if (vowels.includes(element) || element ==' '){
+    output += element + ' '
     } else {
-    console.log(vowels)
-    
+      output += element + 'op' + ' '
   }
+
+}
+// output to console
+console.log (output)
