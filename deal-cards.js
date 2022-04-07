@@ -11,21 +11,21 @@ console.log (deck)
 for (let i = 0; i < 3; i++) {
     console.log (deck[i].rank + ' of '+ deck[i].suit)
   }
-listCards(" Hearts")
-listCards(" Spades")
-listCards(" Clubs")
-listCards(" Diamonds")
+// listCards(" Hearts")
+// listCards(" Spades")
+// listCards(" Clubs")
+// listCards(" Diamonds")
 
-function listCards(suit) {
-    console.log("Ace of " + suit) 
-    // let card = { rank: 'Ace', suit: suit}
-    // deck. push (card)
-    for (let i = 2; i < 11; i++) {
-        console.log(i + " of " + suit)
-    }
-    console.log("Jack of " + suit)
-    console.log("Queen of " + suit)
-    console.log("King of " + suit)
+// function listCards(suit) {
+//     console.log("Ace of " + suit) 
+//     // let card = { rank: 'Ace', suit: suit}
+//     // deck. push (card)
+//     for (let i = 2; i < 11; i++) {
+//         console.log(i + " of " + suit)
+//     }
+//     console.log("Jack of " + suit)
+//     console.log("Queen of " + suit)
+//     console.log("King of " + suit)
 
 const deck = [];
 const suits=['Hearts', 'Clubs', 'Diamonds' , 'Spades']
