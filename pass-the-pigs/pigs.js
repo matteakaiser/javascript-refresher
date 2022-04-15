@@ -1,21 +1,34 @@
 let currentPlayer = 0
+let nextPlayer = 1
 function handleClick(id) {
-    console.log(id)
     if (id == "player0PassButton") {
-        console.log("Pass")
-       switchColors()
-    } else {
-        console.log("Roll")
+        console.log("Player 0 passed");
+        switchColor("player0", "player1");
+    } else if (id == "player1PassButton") {
+        console.log("Player 1 Passed")
+        switchColor("player1", "player2");
+    } else if (id == "player2PassButton") {
+        console.log("Player 2 Passed")
+        switchColor("player2", "player3");
+    } else if (id == "player3PassButton") {
+        console.log("Player 3 Passed")
+        switchColor("player3", "player0");
+    } else if (id == "player0RollButton") {
+    handleRoll()
     }
-    
-}
-function switchColors() {
-    let player0Card = document.getElementById("player0")
-    let player1Card = document.getElementById("player1")
-    let player2Card = document.getElementById("player2")
-    console.log (player0Card)
-    player0Card.setAttribute("class","w3-card w3-container w3-light-gray w3-round-large")
-    player1Card.setAttribute("class","w3-card w3-container w3-dark-gray w3-round-large")
-    player2Card.setAttribute("class","w3-card w3-container w3-dark-gray w3-round-large")
+
 }
 
+function switchColor(currentPlayer, nextPlayer) {
+    let currentPlayerCard = document.getElementById(currentPlayer);
+    let nextPlayerCard = document.getElementById(nextPlayer);
+    currentPlayerCard.setAttribute("class", "w3-card w3-container w3-light-gray w3-round-large")
+    nextPlayerCard.setAttribute("class", "w3-card w3-container w3-dark-gray w3-round-large")
+}
+
+
+function handleRoll(){
+   console.log('player'+currentPlayer+'Pig1')
+    document.getElementById ('player'+currentPlayer+'Pig1').innerHTML='Dot'
+    document.getElementById ('player'+currentPlayer+'Pig2').innerHTML='Dot'
+}
